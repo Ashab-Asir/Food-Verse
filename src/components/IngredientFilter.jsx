@@ -7,7 +7,6 @@ const IngredientFilter = ({ meals }) => {
     (state) => state.ingredientFilter.selectedIngredients
   );
 
-  // Extract unique ingredients from all meals
   const allIngredients = meals.flatMap((meal) =>
     Array.from({ length: 20 }, (_, i) => meal[`strIngredient${i + 1}`])
   );

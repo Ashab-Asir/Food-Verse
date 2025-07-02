@@ -24,17 +24,11 @@ const Card = ({ meal }) => {
         className="w-full h-56 object-cover overflow-hidden"
       />
 
-      {/* Content */}
       <div className="p-6">
-        {/* Tag */}
         <span className="inline-block bg-green-500 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase mb-2">
           {strCategory}
         </span>
-
-        {/* Title */}
         <h3 className="text-xl font-semibold text-gray-800 mb-4">{strMeal}</h3>
-
-        {/* Attributes */}
         <ul className="flex flex-col gap-3 mb-4 text-gray-700 text-base">
           <li className="flex items-center gap-3 ">
             <Notebook className="w-6 h-6 text-orange-500" />
@@ -52,7 +46,7 @@ const Card = ({ meal }) => {
         <div className="flex justify-between items-center mt-auto pt-4 border-t border-gray-200">
           <button
             onClick={() => navigate(`/menu/${idMeal}`)}
-            className="text-sm font-medium text-white bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-lg transition"
+            className="text-sm font-medium text-white bg-[#e67e22] hover:bg-[#cf711f] px-4 py-2 rounded-lg transition"
           >
             More Details
           </button>

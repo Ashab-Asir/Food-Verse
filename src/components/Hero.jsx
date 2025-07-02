@@ -6,6 +6,7 @@ import customer3 from "../assets/customers/customer-3.jpg";
 import customer4 from "../assets/customers/customer-4.jpg";
 import customer5 from "../assets/customers/customer-5.jpg";
 import customer6 from "../assets/customers/customer-6.jpg";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -25,19 +26,13 @@ const Hero = () => {
             </p>
 
             <div className="flex gap-3">
-              <a
-                href="#"
+              <Link
+                to="/menu"
                 className="text-sm sm:text-base md:text-lg  
                 bg-[#e67e22] hover:bg-[#cf711f] text-[#fff] rounded shadow hover:shadow-lg py-2 px-4 border hover:border-transparent"
               >
-                Explore Now
-              </a>
-              <a
-                href="#"
-                className="text-sm sm:text-base md:text-lg bg-transparent hover:bg-[#cf711f] text-[#555] hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-[#e67e22] hover:border-transparent"
-              >
-                Explore Now
-              </a>
+                See Menu
+              </Link>
             </div>
 
             <div className="flex mt-7 flex-wrap justify-between items-center gap-4">

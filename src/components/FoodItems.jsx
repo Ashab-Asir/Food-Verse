@@ -25,7 +25,7 @@ const FoodItems = ({ meals }) => {
   return (
     <section className="py-12 px-4">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-orange-600 mb-10">
+        <h2 className="text-3xl md:text-5xl font-bold text-center text-[#2e1907] mb-10">
           Our Delicious Meals
         </h2>
 

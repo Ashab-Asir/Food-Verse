@@ -10,6 +10,7 @@ import img4 from "../assets/gallery/gallery-4.jpg";
 import img5 from "../assets/gallery/gallery-5.jpg";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   const cards = [
@@ -69,8 +70,13 @@ const HomePage = () => {
       <NavBar></NavBar>
       <Hero></Hero>
       <div className="px-4 py-8 max-w-4xl mx-auto mb-10">
+        <h1 className="text-xl lg:text-4xl md:text-3xl mb-10 font-bold text-center text-[#2e1907]">
+          Our Featured Items
+        </h1>
         <Carousel slides={cards} />
-        <p className="text-center mt-8">See all recipes → </p>
+        <Link to="/menu">
+          <p className="text-center text-[#e67e22] mt-8">See all recipes → </p>
+        </Link>
       </div>
       <Contact></Contact>
       <Footer></Footer>
