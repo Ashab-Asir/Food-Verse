@@ -25,6 +25,9 @@ const NavBar = () => {
           <NavLink to="/" className="hover:text-[#e67e22] transition">
             Home
           </NavLink>
+          <NavLink to="/menu" className="hover:text-[#e67e22] transition">
+            Menu
+          </NavLink>
           <NavLink to="/featured" className="hover:text-[#e67e22] transition">
             Featured
           </NavLink>
@@ -65,6 +68,13 @@ const NavBar = () => {
             className="hover:text-[#e67e22]"
           >
             Home
+          </NavLink>
+          <NavLink
+            onClick={() => setMenuOpen(false)}
+            to="/"
+            className="hover:text-[#e67e22]"
+          >
+            Menu
           </NavLink>
           <NavLink
             onClick={() => setMenuOpen(false)}
