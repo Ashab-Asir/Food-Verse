@@ -71,7 +71,7 @@ const NavBar = () => {
           </NavLink>
           <NavLink
             onClick={() => setMenuOpen(false)}
-            to="/"
+            to="/menu"
             className="hover:text-[#e67e22]"
           >
             Menu

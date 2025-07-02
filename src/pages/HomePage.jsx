@@ -14,49 +14,54 @@ import Footer from "../components/Footer";
 const HomePage = () => {
   const cards = [
     <Card
-      image={img1}
-      title="Gyozas"
-      calories={650}
-      nutriScore={74}
-      rating={4.9}
-      ratingCount={537}
-      tag="Vegetarian"
+      meal={{
+        strMealThumb: img1,
+        strMeal: "Gyozas",
+        strInstructions: "sdfodjsfl",
+        strCategory: "Desert",
+        strArea: "India",
+        strTags: "egg",
+      }}
     />,
     <Card
-      image={img2}
-      title="Avocado Salad"
-      calories={400}
-      nutriScore={92}
-      rating={4.8}
-      ratingCount={441}
-      tag="Vegan"
+      meal={{
+        strMealThumb: img2,
+        strMeal: "Avocado Salad",
+        strInstructions: "sdfodjsfl",
+        strCategory: "Salad",
+        strArea: "Japan",
+        strTags: "zero cal",
+      }}
     />,
     <Card
-      image={img3}
-      title="Pasta"
-      calories={550}
-      nutriScore={85}
-      rating={4.6}
-      ratingCount={321}
-      tag="Vegetarian"
+      meal={{
+        strMealThumb: img3,
+        strMeal: "Pasta",
+        strInstructions: "sdfodjsfl",
+        strCategory: "Salad",
+        strArea: "Qatar",
+        strTags: "Vegetarian",
+      }}
     />,
     <Card
-      image={img4}
-      title="Tacos"
-      calories={480}
-      nutriScore={88}
-      rating={4.7}
-      ratingCount={287}
-      tag="Spicy"
+      meal={{
+        strMealThumb: img4,
+        strMeal: "Tacos",
+        strInstructions: "sdfodjsfl",
+        strCategory: "Dessert",
+        strArea: "Bangladesh",
+        strTags: "Spicy",
+      }}
     />,
     <Card
-      image={img5}
-      title="Grilled Fish"
-      calories={430}
-      nutriScore={95}
-      rating={4.9}
-      ratingCount={413}
-      tag="Pescatarian"
+      meal={{
+        strMealThumb: img5,
+        strMeal: "Grilled Fish",
+        strInstructions: "sdfodjsfl",
+        strCategory: "Fish",
+        strArea: "Bangladesh",
+        strTags: "Pescatarian",
+      }}
     />,
   ];
   return (
