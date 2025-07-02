@@ -1,6 +1,10 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { setSearch } from "../redux/slices/SearchSlice";
 
 const SearchBox = () => {
+  const dispatch = useDispatch();
+
   return (
     <section
       className="relative w-full h-[40vh] bg-cover bg-center"
@@ -19,6 +23,7 @@ const SearchBox = () => {
 
         <input
           type="text"
+          onChange={(e) => dispatch(setSearch(e.target.value))}
           placeholder="Search meals..."
           className="w-full max-w-md px-5 py-3 rounded-md bg-white text-gray-800 text-lg shadow-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
         />
