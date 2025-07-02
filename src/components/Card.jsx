@@ -1,7 +1,10 @@
 import { Flag, Heart, Notebook, Tags } from "lucide-react";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { addToFavourite } from "../redux/slices/FavouriteSlice";
 
 const Card = ({ meal }) => {
+  const dispatch = useDispatch();
   const {
     idMeal,
     strMealThumb,
@@ -53,7 +56,12 @@ const Card = ({ meal }) => {
           >
             More Details
           </button>
-          <button className="p-2 bg-gray-100 rounded-full hover:bg-red-100 group transition">
+          <button
+            onClick={() =>
+              dispatch(addToFavourite({ idMeal, strMeal, strMealThumb }))
+            }
+            className="p-2 bg-gray-100 rounded-full hover:bg-red-100 group transition"
+          >
             <Heart className="text-gray-500 group-hover:text-red-500 w-5 h-5" />
           </button>
         </div>
