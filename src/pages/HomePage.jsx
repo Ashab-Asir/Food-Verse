@@ -10,6 +10,7 @@ import img4 from "../assets/gallery/gallery-4.jpg";
 import img5 from "../assets/gallery/gallery-5.jpg";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
+import Favourite from "../components/Favourite";
 
 const HomePage = () => {
   const cards = [
@@ -73,6 +74,7 @@ const HomePage = () => {
         <p className="text-center mt-8">See all recipes → </p>
       </div>
       <Contact></Contact>
+      <Favourite></Favourite>
       <Footer></Footer>
     </div>
   );

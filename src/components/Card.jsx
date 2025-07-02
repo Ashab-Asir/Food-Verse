@@ -1,7 +1,9 @@
 import { Flag, Heart, Notebook, Tags } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Card = ({ meal }) => {
   const {
+    idMeal,
     strMealThumb,
     strMeal,
     strInstructions,
@@ -9,6 +11,7 @@ const Card = ({ meal }) => {
     strArea,
     strTags,
   } = meal;
+  const navigate = useNavigate();
   return (
     <div className="max-w-sm px-4 py-2 bg-white rounded-2xl shadow-md overflow-hidden">
       {/* Meal Image */}
@@ -44,7 +47,10 @@ const Card = ({ meal }) => {
         </ul>
 
         <div className="flex justify-between items-center mt-auto pt-4 border-t border-gray-200">
-          <button className="text-sm font-medium text-white bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-lg transition">
+          <button
+            onClick={() => navigate(`/menu/${idMeal}`)}
+            className="text-sm font-medium text-white bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-lg transition"
+          >
             More Details
           </button>
           <button className="p-2 bg-gray-100 rounded-full hover:bg-red-100 group transition">
