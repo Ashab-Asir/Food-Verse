@@ -15,8 +15,8 @@ const NavBar = () => {
 
         {/* Hamburger Button */}
         <div className="md:hidden">
-          <button onClick={() => setMenuOpen(!menuOpen)}>
-            {menuOpen ? <X size={28} /> : <Menu size={28} />}
+          <button onClick={() => setMenuOpen(true)}>
+            <Menu size={28} />
           </button>
         </div>
 
@@ -47,26 +47,55 @@ const NavBar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      {menuOpen && (
-        <div className="md:hidden px-4 pb-4 space-y-2 bg-black transition-all duration-300 ease-in-out">
-          <NavLink to="/" className="block hover:text-gray-400">
+      {/* Mobile Full-Screen Drawer Menu */}
+      <div
+        className={`fixed top-0 right-0 w-full h-full bg-black text-white z-50 transform transition-transform duration-300 ease-in-out ${
+          menuOpen ? "translate-x-0" : "translate-x-full"
+        } md:hidden`}
+      >
+        <div className="flex justify-end p-4">
+          <button onClick={() => setMenuOpen(false)}>
+            <X size={28} />
+          </button>
+        </div>
+        <div className="flex flex-col items-center justify-center h-full gap-6 text-lg uppercase font-semibold">
+          <NavLink
+            onClick={() => setMenuOpen(false)}
+            to="/"
+            className="hover:text-gray-400"
+          >
             Home
           </NavLink>
-          <NavLink to="/featured" className="block hover:text-gray-400">
+          <NavLink
+            onClick={() => setMenuOpen(false)}
+            to="/featured"
+            className="hover:text-gray-400"
+          >
             Featured
           </NavLink>
-          <NavLink to="/testimonials" className="block hover:text-gray-400">
+          <NavLink
+            onClick={() => setMenuOpen(false)}
+            to="/testimonials"
+            className="hover:text-gray-400"
+          >
             Testimonials
           </NavLink>
-          <NavLink to="/contact" className="block hover:text-gray-400">
+          <NavLink
+            onClick={() => setMenuOpen(false)}
+            to="/contact"
+            className="hover:text-gray-400"
+          >
             Contact
           </NavLink>
-          <NavLink to="/favourites" className="block hover:text-gray-400">
+          <NavLink
+            onClick={() => setMenuOpen(false)}
+            to="/favourites"
+            className="hover:text-gray-400"
+          >
             Favourite
           </NavLink>
         </div>
-      )}
+      </div>
     </div>
   );
 };

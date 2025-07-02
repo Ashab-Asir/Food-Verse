@@ -1,10 +1,12 @@
 import React from "react";
 import NavBar from "../components/NavBar";
+import Hero from "../components/Hero";
 
 const HomePage = () => {
   return (
-    <div className="max-w-5xl  mx-auto">
+    <div className="container max-w-full mx-auto ">
       <NavBar></NavBar>
+      <Hero></Hero>
     </div>
   );
 };
