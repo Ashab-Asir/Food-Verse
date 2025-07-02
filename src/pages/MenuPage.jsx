@@ -1,4 +1,3 @@
-import React from "react";
 import NavBar from "../components/NavBar";
 import SearchBox from "../components/SearchBox";
 import useGetFood from "../hooks/useGetFood";

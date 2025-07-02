@@ -1,4 +1,3 @@
-import React from "react";
 import heroImg from "../assets/hero.png";
 import customer1 from "../assets/customers/customer-1.jpg";
 import customer2 from "../assets/customers/customer-2.jpg";
@@ -13,7 +12,6 @@ const Hero = () => {
     <section>
       <div className="bg-[#fdf2e9] text-[#2e1907] px-4 py-5 md:px-12">
         <div className="container mx-auto flex flex-col md:flex-row items-center md:my-20">
-          {/* Text Content */}
           <div className="flex flex-col w-full lg:w-2/3 justify-center items-start p-5">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-5 font-bold text-[#2e1907] tracking-loose">
               A healthy meal delivered to your door, every single day
@@ -36,7 +34,6 @@ const Hero = () => {
             </div>
 
             <div className="flex mt-7 flex-wrap justify-between items-center gap-4">
-              {/* Customer Images */}
               <div className="flex">
                 {[
                   customer1,
@@ -57,14 +54,12 @@ const Hero = () => {
                 ))}
               </div>
 
-              {/* Customer Count Text */}
               <div className="text-sm sm:text-base md:text-lg font-bold">
                 250,000+ meals delivered last year!
               </div>
             </div>
           </div>
 
-          {/* Responsive Hero Image */}
           <div className="p-5 mt-12 mb-6 md:mb-0 md:mt-0 ml-0 md:ml-12 lg:w-[720px] md:w-[600px] hidden md:block">
             <img src={heroImg} alt="Hero" />
           </div>

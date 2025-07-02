@@ -1,4 +1,3 @@
-// components/Drawer.jsx
 import { X } from "lucide-react";
 import { useSelector } from "react-redux";
 import FavoriteItem from "./FavouriteItem";
@@ -8,7 +7,6 @@ const Drawer = ({ isOpen, onClose }) => {
   console.log(favouritItems);
   return (
     <>
-      {/* Overlay */}
       <div
         className={`fixed inset-0 bg-black/50 z-40 transition-opacity duration-300 ${
           isOpen
@@ -17,8 +15,6 @@ const Drawer = ({ isOpen, onClose }) => {
         }`}
         onClick={onClose}
       ></div>
-
-      {/* Drawer */}
       <div
         className={`fixed top-0 right-0 h-full bg-white shadow-xl z-50 transition-transform duration-300 ease-in-out
         w-full sm:w-[30vw] 

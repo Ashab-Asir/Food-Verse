@@ -1,9 +1,7 @@
-import React from "react";
 import img from "../assets/eating.jpg";
 const Contact = () => {
   return (
     <section className=" max-w-7xl mx-auto my-12 rounded-2xl overflow-hidden shadow-md flex flex-col md:flex-row">
-      {/* Left: Form */}
       <div
         className="bg-[#cf711f] text-black p-10 flex-1"
         style={{
@@ -20,7 +18,6 @@ const Contact = () => {
         </p>
 
         <form className="space-y-6">
-          {/* Full Name and Email */}
           <div className="flex flex-col md:flex-row gap-6">
             <div className="flex flex-col flex-1 text-[#2e1907]">
               <label className="mb-1 font-medium ">Full Name</label>
@@ -40,7 +37,6 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Dropdown and Button */}
           <div className="flex flex-col md:flex-row gap-6">
             <div className="flex flex-col flex-1">
               <label className="mb-1 font-medium">
@@ -67,7 +63,6 @@ const Contact = () => {
         </form>
       </div>
 
-      {/* Right: Image */}
       <div className="flex-1 hidden md:block">
         <img
           src={img}

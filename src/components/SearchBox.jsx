@@ -1,4 +1,3 @@
-import React from "react";
 import { useDispatch } from "react-redux";
 import { setSearch } from "../redux/slices/SearchSlice";
 
@@ -15,7 +14,6 @@ const SearchBox = () => {
         `,
       }}
     >
-      {/* Overlay Content */}
       <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-white drop-shadow-lg mb-6">
           Discover Your Next Favorite Meal

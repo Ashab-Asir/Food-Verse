@@ -14,7 +14,7 @@ const useGetFood = () => {
           `https://www.themealdb.com/api/json/v1/1/search.php?s=a`
         );
         const data = await response.json();
-        setMeals(data.meals || []); // fallback to empty array if no results
+        setMeals(data.meals || []);
       } catch (err) {
         console.log(err);
         setError("Failed to load meals");

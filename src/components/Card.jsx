@@ -17,7 +17,6 @@ const Card = ({ meal }) => {
   const navigate = useNavigate();
   return (
     <div className="max-w-sm px-4 py-2 bg-white rounded-2xl shadow-md overflow-hidden">
-      {/* Meal Image */}
       <img
         src={strMealThumb}
         alt={strMeal}
