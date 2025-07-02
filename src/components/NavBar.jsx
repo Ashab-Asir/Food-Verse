@@ -6,7 +6,7 @@ const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="bg-black text-white shadow-md sticky top-0 z-50">
+    <div className="bg-[#fdf2e9] text-[#2e1907] shadow-md sticky top-0 z-50">
       <div className="flex justify-between items-center px-4 py-3 md:px-8">
         {/* Logo */}
         <Link to="/" className="text-xl font-bold">
@@ -22,26 +22,26 @@ const NavBar = () => {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex gap-8 text-sm uppercase font-semibold">
-          <NavLink to="/" className="hover:text-gray-400 transition">
+          <NavLink to="/" className="hover:text-[#e67e22] transition">
             Home
           </NavLink>
-          <NavLink to="/featured" className="hover:text-gray-400 transition">
+          <NavLink to="/featured" className="hover:text-[#e67e22] transition">
             Featured
           </NavLink>
           <NavLink
             to="/testimonials"
-            className="hover:text-gray-400 transition"
+            className="hover:text-[#e67e22] transition"
           >
             Testimonials
           </NavLink>
-          <NavLink to="/contact" className="hover:text-gray-400 transition">
+          <NavLink to="/contact" className="hover:text-[#e67e22] transition">
             Contact
           </NavLink>
         </nav>
 
         {/* Right Section */}
         <div className="hidden md:block">
-          <Link to="/favourites" className="hover:text-gray-400 transition">
+          <Link to="/favourites" className="hover:text-[#e67e22] transition">
             Favourite
           </Link>
         </div>
@@ -49,7 +49,7 @@ const NavBar = () => {
 
       {/* Mobile Full-Screen Drawer Menu */}
       <div
-        className={`fixed top-0 right-0 w-full h-full bg-black text-white z-50 transform transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 right-0 w-full h-full bg-[#fdf2e9] text-[#2e1907] z-50 transform transition-transform duration-300 ease-in-out ${
           menuOpen ? "translate-x-0" : "translate-x-full"
         } md:hidden`}
       >
@@ -62,35 +62,35 @@ const NavBar = () => {
           <NavLink
             onClick={() => setMenuOpen(false)}
             to="/"
-            className="hover:text-gray-400"
+            className="hover:text-[#e67e22]"
           >
             Home
           </NavLink>
           <NavLink
             onClick={() => setMenuOpen(false)}
             to="/featured"
-            className="hover:text-gray-400"
+            className="hover:text-[#e67e22]"
           >
             Featured
           </NavLink>
           <NavLink
             onClick={() => setMenuOpen(false)}
             to="/testimonials"
-            className="hover:text-gray-400"
+            className="hover:text-[#e67e22]"
           >
             Testimonials
           </NavLink>
           <NavLink
             onClick={() => setMenuOpen(false)}
             to="/contact"
-            className="hover:text-gray-400"
+            className="hover:text-[#e67e22]"
           >
             Contact
           </NavLink>
           <NavLink
             onClick={() => setMenuOpen(false)}
             to="/favourites"
-            className="hover:text-gray-400"
+            className="hover:text-[#e67e22]"
           >
             Favourite
           </NavLink>
