@@ -1,12 +1,26 @@
 import { useSelector } from "react-redux";
 import Card from "./Card";
+import IngredientFilter from "./IngredientFilter";
 
 const FoodItems = ({ meals }) => {
   const search = useSelector((state) => state.search.search.toLowerCase());
-
-  const filteredMeals = meals.filter((meal) =>
-    meal.strMeal.toLowerCase().includes(search)
+  const selectedIngredients = useSelector(
+    (state) => state.ingredientFilter.selectedIngredients
   );
+
+  const filteredMeals = meals.filter((meal) => {
+    const matchesSearch = meal.strMeal.toLowerCase().includes(search);
+
+    const mealIngredients = Array.from({ length: 20 }, (_, i) =>
+      meal[`strIngredient${i + 1}`]?.toLowerCase()
+    ).filter(Boolean);
+
+    const matchesIngredients = selectedIngredients.every((ingredient) =>
+      mealIngredients.includes(ingredient.toLowerCase())
+    );
+
+    return matchesSearch && matchesIngredients;
+  });
 
   return (
     <section className="py-12 px-4">
@@ -15,6 +29,10 @@ const FoodItems = ({ meals }) => {
           Our Delicious Meals
         </h2>
 
+        {/* Ingredient Filter */}
+        <IngredientFilter meals={meals} />
+
+        {/* Meals */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
           {filteredMeals.length > 0 ? (
             filteredMeals.map((meal) => <Card key={meal.idMeal} meal={meal} />)
